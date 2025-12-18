@@ -1,0 +1,9 @@
+{
+	"name": "dfspotifyprojectaz",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d7d4e6be-8c7e-4ee9-bf1c-7ddce12f2fa1",
+		"tenantId": "0897da16-4542-4e79-8182-29fbdc84556e"
+	}
+}
