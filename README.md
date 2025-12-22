@@ -67,4 +67,5 @@ with this project. It's also possible to interact with it directly using the CLI
 5. Finally, to run tests locally, use `pytest`:
    ```
    $ uv run pytest
-   ```
+   `
+# spotifyproject
