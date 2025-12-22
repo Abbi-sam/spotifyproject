@@ -1,0 +1,27 @@
+bundle:
+  name: spotify_dab
+  uuid: c2b598a1-a3f0-41eb-8a73-b7a2d682fb65
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7405618969451075.15.azuredatabricks.net
+      #root_path: /Workspace/Users/abbisam27@outlook.com/.bundle/${bundle.name}/${bundle.target}
+    presets:
+      source_linked_deployment: false
+      
+      
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-7405618969451075.15.azuredatabricks.net
+      # We explicitly deploy to /Workspace/Users/abbisam27@outlook.com to make sure we only have a single copy.
+      root_path: /Workspace/PROD/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: spotify_cat
+      schema: prod
+    permissions:
+      - user_name: abbisam27@outlook.com
+        level: CAN_MANAGE
